@@ -27,8 +27,6 @@ lm_mode = lm(glm_formula,data = Train)
 lm_pred = predict(glm_mode)
 
 
-# Cleaning Data.
-
 Train$Death= ifelse(Train$Death == "0#",0,Train$Death)
 lm_formula_Two = as.formula("Death ~ Name.of.State...UT")
 lm_model_Two = lm(lm_formula_Two,data = Train)
